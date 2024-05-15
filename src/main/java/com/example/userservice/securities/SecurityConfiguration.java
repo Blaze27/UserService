@@ -80,16 +80,16 @@ public class SecurityConfiguration {
         return http.build();
     }
 
-    @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails userDetails = User.builder()
-                .username("user")
-                .password("$2a$12$UltEBD2KnaH7S/EUd0OsJu2dv3KhbhuqXyCWzperAgpz6mMBYwrIi")
-                .roles("USER")
-                .build();
-
-        return new InMemoryUserDetailsManager(userDetails);
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService() {
+//        UserDetails userDetails = User.builder()
+//                .username("user")
+//                .password("$2a$12$UltEBD2KnaH7S/EUd0OsJu2dv3KhbhuqXyCWzperAgpz6mMBYwrIi")
+//                .roles("USER")
+//                .build();
+//
+//        return new InMemoryUserDetailsManager(userDetails);
+//    }
 //
 //    @Bean
 //    public RegisteredClientRepository registeredClientRepository() {
