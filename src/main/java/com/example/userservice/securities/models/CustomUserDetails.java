@@ -16,7 +16,7 @@ import java.util.List;
 @Getter
 @Setter
 public class CustomUserDetails implements UserDetails {
-
+    private Long userId;
     private String username;
     private String password;
     private boolean accountNonExpired;
@@ -30,6 +30,7 @@ public class CustomUserDetails implements UserDetails {
     }
 
     public CustomUserDetails(User user) {
+        this.userId = user.getId();
         this.username = user.getEmail();
         this.password = user.getHashedPassword();
         this.accountNonExpired = true;
